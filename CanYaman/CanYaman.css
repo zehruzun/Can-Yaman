@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+    cursor: pointer;
+}
+
+p{
+    color: wheat;
+}
+
+.codetxt{
+    font-size: 20px;
+    color: transparent; /* Metni saydam yaparak gizliyoruz */
+    text-shadow: 0 0 5px rgba(218, 215, 215, 1);
+}
+
+body{ 
+    text-align: center;
+    background-color: rgb(140, 140, 140);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-color: #121212; */
+}
+
+.board{
+    width: 212.29mm;
+    height: 98.41mm;
+    /* background-color: #232323; */
+    border-radius: 20px;
+}
+
+.glasses{
+    position: absolute;
+    width: 212.29mm;
+    height: 98.41mm;
+    border-radius: 20px;
+}
+
+.container{
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    margin: 7% auto;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(240, 205, 6, 1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 8px solid rgb(255, 242, 1);    
+    box-shadow: 0 8px 32p 0 rgba(0, 0, 0, 0.38);
+    border-bottom-left-radius: 40%;
+    border-end-end-radius: 85%;
+    border-start-start-radius: 55%;
+    border-top-right-radius: 35%;
+    overflow: hidden;
+}
+
+.glass .codetxt{
+    animation: scroll 26s linear infinite;
+}
+
+.container:last-child{
+    left: 43%;
+    transform: scaleX(-1);
+}
+
+.glasses::after{
+    content: '';
+    position: absolute;
+    top: 18%;
+    left: 41.5%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 8px;
+    box-shadow: 0 8px 32p 0 rgba(0, 0, 0, 0.38);
+    background-color: rgb(255, 242, 1);    
+}
+
+.glasses::before{
+    content: '';
+    position: absolute;
+    top: 30.5%;
+    left: 41.5%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 8px;
+    box-shadow: 0 8px 32p 0 rgba(0, 0, 0, 0.38);
+    background-color: rgb(255, 242, 1);    
+}
+
+#score{
+    content: '';
+    position: absolute;
+    top: 33.5%;
+    left: 65%;
+}
+
+#score p{
+    font-size: 20px;
+    text-align: right;
+    color: black;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(20%); /* Metni ekranın altına yerleştirin */
+    }
+    100% {
+        transform: translateY(-100%); /* Metni ekranın üstüne taşıyın */
+    }
+}
